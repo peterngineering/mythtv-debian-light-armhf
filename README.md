@@ -70,7 +70,8 @@ python3-lxml python3-mysqldb python3-setuptools python3-pycurl -y</code>
 <code>git clone --single-branch -b fixes/35 https://github.com/MythTV/mythtv</code>
 
 ### Optionally, copy over a custom optimized configure file with new ffmpeg options specific to your cpu.
-### TESTING OF THIS SECTION INCOMPLETE
+### TESTING OF THIS SECTION INCOMPLETE may produced unexpected results and/or mark your packagename as "-dirty"
+### If in doubt skip this section.
 <code>cp -av ~/WORK/mythtv-debian-light-armhf/OPTIONAL_MYTHTV35_CONFIGURE_DEB-LIGHT-RPI2.configure ~/WORK/mythtv/mythtv/configure</code>
 
 This step adds a new configure file with section modification for the rpi2 example project here. 
