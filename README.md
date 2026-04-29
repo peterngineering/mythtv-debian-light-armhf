@@ -37,6 +37,7 @@ and kernel.
 <code>
 BUILD_TYPE=Release
 BUILD_PRESET=qt5
+BUILDDEST=~/proj/build
 BUILD_METHOD=make
 </code>
 
