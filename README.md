@@ -94,14 +94,14 @@ devices._
 ### Build the main mythtv package from the mythtv branch you cloned, and call the build_package.sh script directly from it.
 <code>cd ~/WORK/mythtv/mythtv</code>
 
-<code> ../../deb-light-rpi2/build_package.sh</code>
+<code>../../mythtv-debian-light-armhf/deb-light-rpi2/package.sh</code>
 
 _If all went well you should have a new deb produced in 'WORK' for the main mythtv package._
 
 ### Build the plugins:
 <code>cd ../mythplugins</code>
 
-<code>../../deb-light-rpi2/build_package.sh</code>
+<code>../../mythtv-debian-light-armhf/deb-light-rpi2/package.sh</code>
 
 _If all went well you should have a new deb produced in 'WORK' for the mythplugins package._
 
