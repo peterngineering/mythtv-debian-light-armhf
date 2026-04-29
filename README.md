@@ -2,11 +2,11 @@
 
 * * *
 
-This ongoing project is a fork of upstream 'mythtv & packaging' projects
-from specific commit(s) with some minor changes to optimize and build
-debian packages for a specific cpu.
+This is ongoing work upstream from the 'mythtv & packaging' projects
+with some minor changes to optimize and build debian packages for a specific cpu.
 
 **Note: I am not associated with either upstream project or official
 developers of such in any way.**
 
-Switch to the specific branch as needed as main is informational only.
+For releases and more information to rebuild:
+Switch to the specific branch as needed,  as 'main' is informational only.
