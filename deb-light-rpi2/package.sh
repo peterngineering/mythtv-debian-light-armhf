@@ -88,7 +88,7 @@ if [[ "$packagebranch" != master && "$packagebranch" != fixes* ]] ; then
 fi
 case $projname in
     mythtv)
-        packagename=mythtv-light-rpi2_${source}${packagerel}_${arch}_$codename$strip
+        packagename=mythtv-debian-light-rpi2_${source}${packagerel}_${arch}_$codename$strip
         echo Package $packagename
         if [[ -f $installdir/$packagename.deb || -d $installdir/$packagename ]] ; then
             echo $installdir/$packagename already exists - incrementing SUBRELEASE number
@@ -116,7 +116,7 @@ case $projname in
         fi
 
         cat >$installdir/$packagename/DEBIAN/control <<FINISH
-Package: mythtv-light-rpi2
+Package: mythtv-debian-light-rpi2
 Version: $packagerel
 Section: graphics
 Priority: optional
@@ -127,7 +127,7 @@ Maintainer: P3te <na@none.net>
 Depends: libtag1v5 | libtag2, libavahi-compat-libdnssd1, libqt5widgets5, libqt5script5, libqt5sql5-mysql, libqt5xml5, libqt5network5, pciutils, libva-x11-1 | libva-x11-2, libva-glx1 | libva-glx2, libqt5opengl5, libdbi-perl,  libdbd-mysql-perl, libnet-upnp-perl, libcec3 | libcec4 | libcec6, libfftw3-double3, libfftw3-single3, libass5 | libass9, libfftw3-3 | libfftw3-bin, libraw1394-11, libiec61883-0, libavc1394-0, fonts-liberation, libva-drm1 | libva-drm2, libmp3lame0, libxv1, libpulse0, libhdhomerun3 | libhdhomerun4 | libhdhomerun5, libxnvctrl0, libsamplerate0, libbluray1 | libbluray2, liblzo2-2, libio-socket-inet6-perl, libxml-simple-perl, python3-lxml, python3-mysqldb, python3-requests, python3-requests-cache, libxinerama1, libzip4 | libzip5, libsoundtouch1
 Conflicts: mythtv-common, mythtv-frontend, mythtv-backend, mythtv-light
 Homepage: http://www.mythtv.org
-Description: MythTV Light for Rpi2
+Description: MythTV Debian Light for Rpi2
  Lightweight package that installs MythTV in one package, front end
  and backend. Does not install database or services.
 FINISH
@@ -175,7 +175,7 @@ FINISH
         ls -ld ${packagename}*
         ;;
     mythplugins)
-        mythtvpackagename=mythtv-light-rpi2_${source}${packagerel}_${arch}_$codename$strip
+        mythtvpackagename=mythtv-debian-light-rpi2_${source}${packagerel}_${arch}_$codename$strip
         packagename=mythplugins-light-rpi2_${source}${packagerel}_${arch}_$codename$strip
         echo Package $packagename
         if [[ -f $installdir/$packagename.deb ]] ; then
@@ -223,14 +223,13 @@ Architecture: $arch
 Essential: no
 Installed-Size: `du -B1024 -d0 $installdir/$packagename | cut  -f1`
 Maintainer: P3te <na@none.net>
-Depends: mythtv-light-rpi2, perl, libimage-size-perl, perlmagick, libxml-parser-perl, libxml-sax-perl, libcarp-clan-perl, libsoap-lite-perl, libdate-manip-perl, libdate-calc-perl, libwww-perl, libxml-simple-perl, libdatetime-format-iso8601-perl, libjson-perl, libxml-xpath-perl, mjpegtools, dvdauthor, genisoimage, dvd+rw-tools,  python3-pil, python3-mysqldb, pmount, python3-feedparser, python3-pycurl
-Conflicts: mythtv-common, mythtv-frontend, mythtv-backend
+Depends: mythtv-debian-light-rpi2, perl, libimage-size-perl, perlmagick, libxml-parser-perl, libxml-sax-perl, libcarp-clan-perl, libsoap-lite-perl, libdate-manip-perl, libdate-calc-perl, libwww-perl, libxml-simple-perl, libdatetime-format-iso8601-perl, libjson-perl, libxml-xpath-perl, mjpegtools, dvdauthor, genisoimage, dvd+rw-tools,  python3-pil, python3-mysqldb, pmount, python3-feedparser, python3-pycurl
+Conflicts: mythtv-common, mythtv-frontend, mythtv-backend, mythtv-light
 Homepage: http://www.mythtv.org
-Description: MythTV Plugins Light for Rpi2
+Description: MythTV Plugins Debian Light for Rpi2
  MythTV plugins for the MythTV Light package. MythTV Light must be installed
  before this package. The following plugins are included:
   MythArchive 
-  MythBrowser
   MythGallery
   MythGame
   MythMusic
