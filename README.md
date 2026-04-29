@@ -49,15 +49,14 @@ _(The following only tested on Debian Bookworm so far)_
 <code>
 apt install git-core btop nmap screen vim sudo dh-exec ccache cmake \
 ninja-build pkgconf libdrm-dev libfreetype-dev libfontconfig-dev \
-libxml2-dev libmp3lame-dev libzip-dev libtag1-dev libbluray-dev \
-libsamplerate-dev libsoundtouch-dev libqt5sql5-mysql libqt5opengl5-dev \
+libxml2-dev libmp3lame-dev libvorbis-dev libflac-dev libzip-dev libtag1-dev \
+libbluray-dev libsamplerate-dev libsoundtouch-dev libqt5sql5-mysql libqt5opengl5-dev \
 libxrandr-dev libasound2-dev libhdhomerun-dev libavahi-compat-libdnssd-dev \
-libssl-dev libcdio-dev libcdio-paranoia-dev libnet-upnp-perl \
-libio-socket-inet6-perl liblwp-useragent-determined-perl \
-libdbd-mysql-perl libhttp-parser-perl libxml-simple-perl \
-libmodule-build-perl libhttp-message-perl libdbd-mysql-perl libdbi-perl \
-python3-lxml python3-mysqldb python3-setuptools -y
-</code>
+libssl-dev libcdio-dev libcdio-paranoia-dev libnet-upnp-perl libio-socket-inet6-perl \
+liblwp-useragent-determined-perl libdbd-mysql-perl libhttp-parser-perl libxml-simple-perl \
+libmodule-build-perl libhttp-message-perl libdbd-mysql-perl libdbi-perl libimage-size-perl \
+libdatetime-format-iso8601-perl libsoap-lite-perl libjson-perl libdate-manip-perl libxml-xpath-perl \
+python3-lxml python3-mysqldb python3-setuptools python3-pycurl -y</code>
 
 ### Enter your 'WORK' directory 
 <code>cd ~/WORK</code>
@@ -70,6 +69,7 @@ python3-lxml python3-mysqldb python3-setuptools -y
 <code>git clone --single-branch -b fixes/35 https://github.com/MythTV/mythtv</code>
 
 ### Optionally, copy over a custom optimized configure file with new ffmpeg options specific to your cpu.
+### TESTING OF THIS SECTION INCOMPLETE
 <code>cp -av ~/WORK/mythtv-debian-light-armhf/OPTIONAL_MYTHTV35_CONFIGURE_DEB-LIGHT-RPI2.configure ~/WORK/mythtv/mythtv/configure</code>
 
 This step adds a new configure file with section modification for the rpi2 example project here. 

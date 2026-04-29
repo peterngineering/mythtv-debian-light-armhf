@@ -215,7 +215,7 @@ FINISH
             strip -g -v `find $installdir/$packagename/usr/lib/ -type f -executable`
         fi
         cat >$installdir/$packagename/DEBIAN/control <<FINISH
-Package: mythplugins-light-rpi2
+Package: mythplugins-debian-light-rpi2
 Version: $packagerel
 Section: graphics
 Priority: optional
