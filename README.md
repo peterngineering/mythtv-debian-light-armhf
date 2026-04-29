@@ -67,6 +67,7 @@ python3-lxml python3-mysqldb python3-setuptools -y
 <code>git clone --single-branch -b rpi2/fixes/35 https://github.com/peterngineering/mythtv-debian-light-armhf</code>
 
 ### Clone the mythtv upstream specific branch you want to build
+## Make sure it matches the version above, eg. <rpi2/fixes/3> and <fixes/35>
 <code>git clone --single-branch -b fixes/35 https://github.com/MythTV/mythtv</code>
 
 ### Optionally, copy over a custom optimized configure file with new ffmpeg options specific to your cpu.
