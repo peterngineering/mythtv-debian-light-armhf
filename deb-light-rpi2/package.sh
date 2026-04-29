@@ -176,7 +176,7 @@ FINISH
         ;;
     mythplugins)
         mythtvpackagename=mythtv-debian-light-rpi2_${source}${packagerel}_${arch}_$codename$strip
-        packagename=mythplugins-light-rpi2_${source}${packagerel}_${arch}_$codename$strip
+        packagename=mythplugins-debian-light-rpi2_${source}${packagerel}_${arch}_$codename$strip
         echo Package $packagename
         if [[ -f $installdir/$packagename.deb ]] ; then
             echo $installdir/$packagename already exists - incrementing SUBRELEASE number
