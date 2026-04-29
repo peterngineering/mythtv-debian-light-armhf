@@ -36,7 +36,6 @@ and kernel.
 ### Create a ~/.buildrc
 <code>
 BUILD_TYPE=Release
-BUILDDEST=~/proj/build
 BUILD_PRESET=qt5
 BUILD_METHOD=make
 </code>
