@@ -40,14 +40,7 @@ echo "chroot: $SCHROOT_CHROOT_NAME" >> $gitbasedir/../build_${projdir}.out
 echo "arch: $arch codename: $codename projdir: $projdir branch: $branch" >> $gitbasedir/../build_${projdir}.out
 config_branch=`cat $gitbasedir/../config_${projdir}.branch` || true
 if [[ "$chprefix$arch/$codename/$branch" != "$config_branch" ]] ; then
-    echo "Need to run config again. Now=$chprefix$arch/$codename/$branch Config=$config_branch"
-    echo "Type I to Ignore once, O to override branch setting."
-    read -e resp
-    if [[ "$resp" == O ]]; then
-        echo "$chprefix$arch/$codename/$branch" > $gitbasedir/../config_${projdir}.branch
-    elif [[ "$resp" != I ]]; then
-        exit 2
-    fi
+    echo "$chprefix$arch/$codename/$branch" > $gitbasedir/../config_${projdir}.branch
 fi
 
 numjobs=3
