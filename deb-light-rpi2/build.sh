@@ -50,7 +50,7 @@ if [[ "$chprefix$arch/$codename/$branch" != "$config_branch" ]] ; then
     fi
 fi
 
-numjobs=4
+numjobs=3
 #if [[ `arch` == arm* ]] ; then
 #    numjobs=4
 #fi
