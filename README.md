@@ -139,10 +139,10 @@ suspect 480 SD may work_
 
 
 **Using the rpi2 as a frontend** 
-_You can use ffmpeg profiles as well since the the extra cpu cores and 
-memory can handle it easily. You may decide to use v4l2 even with this 
-anyway so that you could reserve cpu power for the menuing system 
-and other tasks._
+_You can use standard ffmpeg profiles with the rpi2 and "CC/Subtitles" will work._
+
+
+### If you decide to use v4l2 codecs/acceleration playback profiles, "CC/Subtitles" will not work.
 
 
 
