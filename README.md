@@ -24,7 +24,11 @@ the original but still in production, even though over 10 years old is
 one of the least expensive devices that can run a full OS with mythtv.
 The rpi2(cortex-a7) offers quite a bit more power for about 2-2.5
 watts as well. All of the newer 64bit devices from my experience 
-will use 2x more power than these older devices respectively._
+will use 2x more power than these older devices respectively. I'm
+not saying these older devices are better at anything other than using
+less watts at idle. For all other real world uses, the newer devices
+Rpi3/4/5 will perform better accross the board and throttle down when idle
+at the expense of a couple/few watts.__
 
 
 ## How to setup your development environment.
