@@ -1,5 +1,5 @@
 # mythtv-debian-light-armhf
-
+# RPIZERO 
 * * *
 
 This ongoing project is a fork of upstream 'mythtv & packaging' projects
@@ -69,6 +69,7 @@ python3-lxml python3-mysqldb python3-setuptools python3-pycurl -y</code>
 ## Make sure it matches the version above, eg. <rpizero/fixes/35> and <fixes/35>
 <code>git clone --single-branch -b fixes/35 https://github.com/MythTV/mythtv</code>
 
+* * *
 ### Optionally, copy over a custom optimized configure file with new ffmpeg options specific to your cpu.
 ### TESTING OF THIS SECTION INCOMPLETE may produced unexpected results and/or mark your packagename as "-dirty"
 ### If in doubt skip this section.
@@ -91,6 +92,7 @@ devices._
 --disable-runtime-cpudetect \
 </code>
 
+* * *
 
 ### Build the main mythtv package from the mythtv branch you cloned, and call the build_package.sh script directly from it.
 <code>cd ~/WORK/mythtv/mythtv</code>
@@ -131,6 +133,31 @@ Even so, it will stutter when your in the menu._
 
 _I have not tested this scenario yet with using ota mpg2 sources, but I
 suspect 480 SD may work_
+
+
+### CMA MEMORY RESERVATION RPIZERO 
+_The default cma memory reservation appears to be 256MB, which will work as the default._
+
+<code>_dmesg|grep cma
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x0b800000..0x1b7fffff (262144 KiB) map reusable linux,cma
+[    0.044959] Memory: 167248K/458752K available (10435K kernel code, 1603K rwdata, 3400K rodata, 484K init, 367K bss, 27672K reserved, 262144K cma-reserved)</code>
+
+_I recommend appending a value of 128MB as shown below in your /boot/firmware/config.txt._
+<code>
+dtoverlay=vc4-kms-v3d,cma-128
+</code>
+
+### RPIZERO and even other devices when using v4l2-codec/acceleration 
+### "Closed Captions/Subtitling" non-functional with v4l2 playback profiles.
+
+_*For frontend playback on the rpizero.
+While it may make it viewable with some media with proper playback configuration, a downside is that Closed Captions/Subtitling do not appear to work. If you use those features, a minimum of a rpi2 that can do playback without v4l2 involved will be required. The single core original arm6/arm11 rpizero can not manage even sd quality playback with standard ffmpeg decoding no matter which opengl profile configurations selected. Regardless of this limitation, I find it amazing that it can do what it does using the v4l2 codecs. If you remember back when omxplayer/openmax was being used that(cc/subtitles) was also an issue using then as well. I speculate this is because of the way both of them directly access the VideoCore GPU hardware units on the device.*_
+
+
+
+
+
 
 
 
