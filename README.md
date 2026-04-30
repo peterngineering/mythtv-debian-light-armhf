@@ -109,40 +109,18 @@ _If all went well you should have a new deb produced in 'WORK' for the main myth
 
 _If all went well you should have a new deb produced in 'WORK' for the mythplugins package._
 
-_Both the rpi2 and  rpizero can do a mythbackend , but
-com flagging will be slow. You might even have to disable it for
-the rpizero so that it doesnt interfere with serving up UPnP streams._
+_The rpi2 can do a mythbackend , but com flagging can be slow. When configuring your backend
+limit the number of simultaneous jobs to 1._
 
 
+### When using an rpi2 for frontend playback.
+* Use standard ffmpeg/OpenGL profiles.
+* Disable the 2x Deinterlace options.
+* You can try 2x Deint "Low Quality", but it may be unsatisfactory.
+* "CC/Subtitles" will work with standard ffmpeg opengl profiles.
 
-
-**Tip on using the rpizero as a frontend.**
-Due to the single cpu and no NEON on the arm6/arm11 getting this working
-as a frontend is going to be very specific.
-
-_It will not work to any level of satisfication unless you configure
-the playback profile for 'v4l2 codec'._
-<code>
-Current Video Playback Profile  'V4L2 Codecs with V4L2 acceleration and 
-OpenGL Hardware, with decoder on "V4L2 accel", 1 cpu,
-Video Renderer= "OpenGL Hardware" Dint HQ, with no 2x Deint
-</code>
-
-_Now if you have the profile configured correctly and your using mp4 
-sources such as those from a HDHR-extend, it will work for you
-with 480 & 720 source resolutions at 30fps. 
-Even so, it will stutter when your in the menu._
-
-_I have not tested this scenario yet with using ota mpg2 sources, but I
-suspect 480 SD may work_
-
-
-
-**Using the rpi2 as a frontend** 
-_You can use standard ffmpeg profiles with the rpi2 and "CC/Subtitles" will work._
-
-
-### If you decide to use v4l2 codecs/acceleration playback profiles, "CC/Subtitles" will not work.
+### V4L2 codec usage warning.
+_If you decide to use v4l2 codecs/acceleration playback profiles, "CC/Subtitles" will not work._
 
 
 
