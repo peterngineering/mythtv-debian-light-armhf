@@ -68,12 +68,18 @@ case $projname in
                       --cpu=cortex-a72 --arch=aarch64  \
                       $MYTHTV_CONFIG_OPT_EXTRA"
                 elif [[ $arch == arm* ]] ; then
-                    config_opt="--compile-type=release --enable-libmp3lame --disable-vdpau --enable-v4l2 --disable-debug --enable-small \
-                      --enable-opengl  \
+                    config_opt="--compile-type=release \
+		      --enable-libmp3lame \
+		      --enable-libx264 \
+		      --disable-vdpau \
+		      --disable-v4l2 \
+		      --enable-vulkan \
+		      --disable-debug \
+		      --enable-small \
+                      --enable-opengl \
                       --disable-vaapi \
-		      --disable-neon \
-                      --cpu=arm1176jzf-s --arch=armv6zk --extra-cflags=-mfpu=vfp \
-                      --extra-cxxflags=-mfpu=vfp \
+                      --cpu=cortex-a72 --arch=armv7a --extra-cflags=-mfpu=neon-fp-armv8 \
+                      --extra-cxxflags=-mfpu=neon-fp-armv8 \
                       $MYTHTV_CONFIG_OPT_EXTRA"
                 else
                     config_opt="--enable-libmp3lame --enable-libx264 --enable-vulkan $MYTHTV_CONFIG_OPT_EXTRA"
@@ -134,12 +140,18 @@ case $projname in
                       --cpu=cortex-a72 --arch=aarch64  \
                       $MYTHTV_CONFIG_OPT_EXTRA"
                 elif [[ $arch == arm* ]] ; then
-                    config_opt="--compile-type=release --enable-libmp3lame --disable-vdpau --enable-v4l2 --disable-debug --enable-small \
-                      --enable-opengl  \
+                    config_opt="--compile-type=release \
+		      --enable-libmp3lame \
+		      --enable-libx264 \
+		      --disable-vdpau \
+		      --disable-v4l2 \
+		      --enable-vulkan \
+		      --disable-debug \
+		      --enable-small \
+                      --enable-opengl \
                       --disable-vaapi \
-		      --disable-neon \
-                      --cpu=arm1176jzf-s --arch=armv6zk --extra-cflags=-mfpu=vfp \
-                      --extra-cxxflags=-mfpu=vfp \
+                      --cpu=cortex-a72 --arch=armv7a --extra-cflags=-mfpu=neon-fp-armv8 \
+                      --extra-cxxflags=-mfpu=neon-fp-armv8 \
                       $MYTHTV_CONFIG_OPT_EXTRA"
                 else
                     config_opt="--enable-libmp3lame --enable-libx264 --enable-vulkan $MYTHTV_CONFIG_OPT_EXTRA"
