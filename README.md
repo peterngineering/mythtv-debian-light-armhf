@@ -69,6 +69,8 @@ python3-lxml python3-mysqldb python3-setuptools python3-pycurl -y</code>
 ## Make sure it matches the version above, eg. <rpi2/fixes/35> and <fixes/35>
 <code>git clone --single-branch -b fixes/35 https://github.com/MythTV/mythtv</code>
 
+
+* * *
 ### Optionally, copy over a custom optimized configure file with new ffmpeg options specific to your cpu.
 ### TESTING OF THIS SECTION INCOMPLETE may produced unexpected results and/or mark your packagename as "-dirty"
 ### If in doubt skip this section.
@@ -91,6 +93,7 @@ devices._
 --disable-runtime-cpudetect \
 </code>
 
+* * *
 
 ### Build the main mythtv package from the mythtv branch you cloned, and call the build_package.sh script directly from it.
 <code>cd ~/WORK/mythtv/mythtv</code>
