@@ -75,8 +75,9 @@ python3-lxml python3-mysqldb python3-setuptools python3-pycurl -y</code>
 
 * * *
 ### Optionally, copy over a custom optimized configure file with new ffmpeg options specific to your cpu.
-### TESTING OF THIS SECTION INCOMPLETE may produced unexpected results and/or mark your packagename as "-dirty"
-### If in doubt skip this section.
+### I don't recommend this for any but the rpizero, since it is so constrained, it might help a little.
+### TESTING OF THIS SECTION may produce unexpected results and/or mark your packagename as "-dirty"
+### You can skip it marking it dirty if you git commit before building.
 <code>cp -av ~/WORK/mythtv-debian-light-armhf/OPTIONAL_MYTHTV35_CONFIGURE_DEB-LIGHT-RPIZERO.configure ~/WORK/mythtv/mythtv/configure</code>
 
 This step adds a new configure file with section modification for the rpizero example project here. 
