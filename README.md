@@ -12,7 +12,7 @@ developers of such in any way.**
 
 ## Why bother when official developers elsewhere offer 64bit versions?
 
-1. _The primary goal of this so far is to make debian packages easily 
+1. _The rpizero/rpi2(v1) are not 64bit capable. This project so far is to make debian packages easily 
 available for older 32bit hardware such as the rpi2/rpizero. Loads of
 rpizero/rpi2 devices are still around. Debian still supports armhf
 at least until 2030 with Trixie(LTS)._
@@ -34,7 +34,7 @@ at the expense of a couple/few watts._
 
 ## How to setup your development environment.
 _Assuming you wanted to build for armhf types:_
-I recommend you use a rpi4/5 or similar hw, booted with 32bit userland
+I recommend you use a rpi4 or similar hw, booted with 32bit userland
 and kernel. 
 
 
