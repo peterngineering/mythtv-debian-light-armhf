@@ -68,7 +68,7 @@ case $projname in
                       --cpu=cortex-a72 --arch=aarch64  \
                       $MYTHTV_CONFIG_OPT_EXTRA"
                 elif [[ $arch == arm* ]] ; then
-                    config_opt="--compile-type=release --enable-libmp3lame --disable-vdpau --enable-v4l2 --disable-debug --enable-small \
+                    config_opt="--compile-type=release --disable-mmal --enable-libmp3lame --disable-vdpau --enable-v4l2 --disable-debug --enable-small \
                       --enable-opengl  \
                       --disable-vaapi \
 		      --enable-neon \
@@ -134,7 +134,7 @@ case $projname in
                       --cpu=cortex-a72 --arch=aarch64  \
                       $MYTHTV_CONFIG_OPT_EXTRA"
                 elif [[ $arch == arm* ]] ; then
-                    config_opt="--compile-type=release --enable-libmp3lame --disable-vdpau --enable-v4l2 --disable-debug --enable-small \
+                    config_opt="--compile-type=release --disable-mmal --enable-libmp3lame --disable-vdpau --enable-v4l2 --disable-debug --enable-small \
                       --enable-opengl  \
                       --disable-vaapi \
 		      --enable-neon \
