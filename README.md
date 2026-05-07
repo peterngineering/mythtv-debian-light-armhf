@@ -68,11 +68,11 @@ python3-lxml python3-mysqldb python3-setuptools python3-pycurl -y</code>
 <code>cd ~/WORK</code>
 
 ### Clone this repo's specific the branch you want to build
-<code>git clone --single-branch -b rpi2/fixes/35 https://github.com/peterngineering/mythtv-debian-light-armhf</code>
+<code>git clone --single-branch -b rpi2/fixes/36 https://github.com/peterngineering/mythtv-debian-light-armhf</code>
 
 ### Clone the mythtv upstream specific branch you want to build
-## Make sure it matches the version above, eg. <rpi2/fixes/35> and <fixes/35>
-<code>git clone --single-branch -b fixes/35 https://github.com/MythTV/mythtv</code>
+## Make sure it matches the version above, eg. <rpi2/fixes/36> and <fixes/36>
+<code>git clone --single-branch -b fixes/36 https://github.com/MythTV/mythtv</code>
 
 
 
