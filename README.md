@@ -2,7 +2,7 @@
 # RPI4
 * * *
 
-This ongoing project is a fork of upstream 'mythtv & packaging' projects
+This ongoing project is from the upstream 'mythtv & packaging' projects
 from specific commit(s) with some minor changes to optimize and build
 debian packages for a specific cpu.
 
