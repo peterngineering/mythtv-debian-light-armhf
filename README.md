@@ -2,7 +2,7 @@
 # RPIZERO 
 * * *
 
-This ongoing project is a fork of upstream 'mythtv & packaging' projects
+This ongoing project is from the upstream 'mythtv & packaging' projects
 from specific commit(s) with some minor changes to optimize and build
 debian packages for a specific cpu.
 
@@ -120,8 +120,7 @@ so that it doesnt interfere with serving up UPnP streams._
 
 
 **Tip on using the rpizero as a frontend.**
-Due to the single cpu and no NEON on the arm6/arm11 getting this working
-as a frontend is going to be very specific.
+Getting this working as a frontend is going to be very specific.
 
 _It will not work to any level of satisfication unless you configure
 the playback profile for 'v4l2 codec'._
@@ -157,7 +156,7 @@ dtoverlay=vc4-kms-v3d,cma-128
 ### "Closed Captions/Subtitling" non-functional with v4l2 playback profiles.
 
 _*For frontend playback on the rpizero.
-While it may make it viewable with some media with proper playback configuration, a downside is that Closed Captions/Subtitling do not appear to work. If you use those features, a minimum of a rpi2 that can do playback without v4l2 involved will be required. The single core original arm6/arm11 rpizero can not manage even sd quality playback with standard ffmpeg decoding no matter which opengl profile configurations selected. Regardless of this limitation, I find it amazing that it can do what it does using the v4l2 codecs. If you remember back when omxplayer/openmax was being used that(cc/subtitles) was also an issue using then as well. I speculate this is because of the way both of them directly access the VideoCore GPU hardware units on the device.*_
+While it may make it viewable with some media with proper playback configuration, a downside is that Closed Captions/Subtitling do not appear to work with mythtv in this scenario. If you use those features, a minimum of a rpi2 that can do playback without v4l2 involved will be required. *_
 
 
 
