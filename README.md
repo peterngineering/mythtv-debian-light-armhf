@@ -3,7 +3,7 @@
 
 * * *
 
-This ongoing project is a fork of upstream 'mythtv & packaging' projects
+This ongoing project is from the upstream 'mythtv & packaging' projects
 from specific commit(s) with some minor changes to optimize and build
 debian packages for a specific cpu.
 
@@ -101,7 +101,7 @@ limit the number of simultaneous jobs to 1._
 * "CC/Subtitles" will work with standard ffmpeg opengl profiles.
 
 ### V4L2 codec usage warning.
-_If you decide to use v4l2 codecs/acceleration playback profiles, "CC/Subtitles" will not work._
+_If you decide to use v4l2 codecs/acceleration playback profiles, "CC/Subtitles" will not work with it._
 
 
 
