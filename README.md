@@ -99,6 +99,15 @@ limit the number of simultaneous jobs to 1 or 2._
 * Disable the 2x Deinterlace options.
 * You can try 2x Deint "Low Quality", but it may be unsatisfactory.
 * "CC/Subtitles" will work with standard ffmpeg opengl profiles.
+* Recommend using overlocking for best performance. You can use 'raspi-config'
+   or set it up directly in /boot/firmware/config.txt:
+<code>
+        [pi2]
+        arm_freq=1000
+        core_freq=500
+        sdram_freq=500
+        over_voltage=2
+</code>
 
 ### V4L2 codec usage warning.
 _If you decide to use v4l2 codecs/acceleration playback profiles, "CC/Subtitles" will not work with it enabled._
