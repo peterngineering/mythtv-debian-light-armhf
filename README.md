@@ -121,6 +121,7 @@ so that it doesnt interfere with serving up UPnP streams._
 
 **Tip on using the rpizero as a frontend.**
 Getting this working as a frontend is going to be very specific.
+You might have to research adding a overclocking to /boot/firmware/config.txt
 
 _It will not work to any level of satisfication unless you configure
 the playback profile for 'v4l2 codec'._
