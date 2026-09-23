@@ -19,15 +19,13 @@ at least until 2030 with Trixie(LTS)._
 3. _Make it easy to rework this for any cpu and rebuild._
 
 4. _It is fun to build and see it working on low end arms that can
-be as low as 1W(not including tuner). AFAIK, the arm6/arm11 rpizero
-the original but still in production, even though over 10 years old is 
-one of the least expensive devices that can run a full OS with mythtv.
-The rpi2(cortex-a7) offers quite a bit more power for about 2-2.5
-watts as well. All of the newer 64bit devices from my experience 
-will use 2x more power than these older devices respectively. I'm
-not saying these older devices are better at anything other than using
-less watts at idle. For all other real world uses, the newer devices
-Rpi3/4/5 will perform better accross the board and throttle down when idle
+be as low as 1W(not including tuner). The rpi2(cortex-a7) offers
+quite a bit more power for about 2-2.5 watts as well.
+All of the newer 64bit devices from my experience will use 2x more power
+ than these older devices respectively. I'm not saying these older
+devices are better at anything other than using less watts at idle.
+For all other real world uses, the newer devices
+Rpi3/4/5 will perform better across the board and throttle down when idle
 at the expense of a couple/few watts.__
 
 
@@ -92,14 +90,14 @@ python3-lxml python3-mysqldb python3-setuptools python3-pycurl -y</code>
 ### Build the main mythtv package from the mythtv branch you cloned, and call the build_package.sh script directly from it.
 <code>cd ~/WORK/mythtv/mythtv</code>
 
-<code>../../mythtv-debian-light-armhf/deb-light-rpizero/package.sh</code>
+<code>../../mythtv-debian-light-armhf/deb-light-rpizero/build_package.sh</code>
 
 _If all went well you should have a new deb produced in 'WORK' for the main mythtv package._
 
 ### Build the plugins:
 <code>cd ../mythplugins</code>
 
-<code>../../mythtv-debian-light-armhf/deb-light-rpizero/package.sh</code>
+<code>../../mythtv-debian-light-armhf/deb-light-rpizero/build_package.sh</code>
 
 _If all went well you should have a new deb produced in 'WORK' for the mythplugins package._
 
