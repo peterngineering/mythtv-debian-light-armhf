@@ -52,7 +52,7 @@ BUILD_METHOD=make
 ### Install dev dependencies and a few other useful tools:
 _(The following only tested on Debian Bookworm so far)_
 <code>
-apt install git-core btop nmap screen vim sudo dh-exec ccache cmake \
+apt install git-core btop glsland-dev nmap screen vim sudo dh-exec ccache cmake \
 ninja-build pkgconf libdrm-dev libfreetype-dev libfontconfig-dev \
 libxml2-dev libmp3lame-dev libvorbis-dev libflac-dev libzip-dev libtag1-dev \
 libbluray-dev libsamplerate-dev libsoundtouch-dev libqt5sql5-mysql libqt5opengl5-dev \
@@ -67,18 +67,18 @@ python3-lxml python3-mysqldb python3-setuptools python3-pycurl -y</code>
 <code>cd ~/WORK</code>
 
 ### Clone this repo's specific the branch you want to build
-<code>git clone --single-branch -b rpizero/fixes/35 https://github.com/peterngineering/mythtv-debian-light-armhf</code>
+<code>git clone --single-branch -b rpizero/fixes/36 https://github.com/peterngineering/mythtv-debian-light-armhf</code>
 
 ### Clone the mythtv upstream specific branch you want to build
-## Make sure it matches the version above, eg. <rpizero/fixes/35> and <fixes/35>
-<code>git clone --single-branch -b fixes/35 https://github.com/MythTV/mythtv</code>
+## Make sure it matches the version above, eg. <rpizero/fixes/36> and <fixes/36>
+<code>git clone --single-branch -b fixes/36 https://github.com/MythTV/mythtv</code>
 
 * * *
 ### Optionally, copy over a custom optimized configure file with new ffmpeg options specific to your cpu.
 ### I don't recommend this for any but the rpizero, since it is so constrained, it might help a little.
 ### TESTING OF THIS SECTION may produce unexpected results and/or mark your packagename as "-dirty"
 ### You can skip it marking it dirty if you git commit before building.
-<code>cp -av ~/WORK/mythtv-debian-light-armhf/OPTIONAL_MYTHTV35_CONFIGURE_DEB-LIGHT-RPIZERO.configure ~/WORK/mythtv/mythtv/configure</code>
+<code>cp -av ~/WORK/mythtv-debian-light-armhf/OPTIONAL_MYTHTV36_CONFIGURE_DEB-LIGHT-RPIZERO.configure ~/WORK/mythtv/mythtv/configure</code>
 
 This step adds a new configure file with section modification for the rpizero example project here. 
 _YMMV. But, This is intended to further reduce file sizes of executables
