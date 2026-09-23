@@ -123,8 +123,9 @@ so that it doesnt interfere with serving up UPnP streams._
 Getting this working as a frontend is going to be very specific.
 You might have to research adding a overclocking to /boot/firmware/config.txt
 
-_It will not work to any level of satisfication unless you configure
-the playback profile for 'v4l2 codec'._
+_It will not work to any level of satisfaction unless you configure
+the playback profile for 'v4l2 codec' and completely turn off 2x de-interlacing.
+You will likely want to limit jobs to 1._
 <code>
 Current Video Playback Profile  'V4L2 Codecs with V4L2 acceleration and 
 OpenGL Hardware, with decoder on "V4L2 accel", 1 cpu,
