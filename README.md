@@ -50,7 +50,7 @@ BUILD_METHOD=make
 ### Install dev dependencies and a few other useful tools:
 _(The following only tested on Debian Bookworm so far)_
 <code>
-apt install git-core btop glsland-dev nmap screen vim sudo dh-exec ccache cmake \
+apt install git-core btop glslang-dev nmap screen vim sudo dh-exec ccache cmake \
 ninja-build pkgconf libdrm-dev libfreetype-dev libfontconfig-dev \
 libxml2-dev libmp3lame-dev libvorbis-dev libflac-dev libzip-dev libtag1-dev \
 libbluray-dev libsamplerate-dev libsoundtouch-dev libqt5sql5-mysql libqt5opengl5-dev \
