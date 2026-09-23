@@ -74,16 +74,6 @@ python3-lxml python3-mysqldb python3-setuptools python3-pycurl -y</code>
 <code>git clone --single-branch -b fixes/36 https://github.com/MythTV/mythtv</code>
 
 * * *
-### Optionally, copy over a custom optimized configure file with new ffmpeg options specific to your cpu.
-### I don't recommend this for any but the rpizero, since it is so constrained, it might help a little.
-### TESTING OF THIS SECTION may produce unexpected results and/or mark your packagename as "-dirty"
-### You can skip it marking it dirty if you git commit before building.
-<code>cp -av ~/WORK/mythtv-debian-light-armhf/OPTIONAL_MYTHTV36_CONFIGURE_DEB-LIGHT-RPIZERO.configure ~/WORK/mythtv/mythtv/configure</code>
-
-This step adds a new configure file with section modification for the rpizero example project here. 
-_YMMV. But, This is intended to further reduce file sizes of executables
-and libraries and to hopefully increase performance on cpu constrained
-devices._
  
 <code>
 --disable-neon \
@@ -124,8 +114,7 @@ Getting this working as a frontend is going to be very specific.
 You might have to research adding a overclocking to /boot/firmware/config.txt
 
 _It will not work to any level of satisfaction unless you configure
-the playback profile for 'v4l2 codec' and completely turn off 2x de-interlacing.
-You will likely want to limit jobs to 1._
+the playback profile for 'v4l2 codec' and completely turn off 2x de-interlacing._
 <code>
 Current Video Playback Profile  'V4L2 Codecs with V4L2 acceleration and 
 OpenGL Hardware, with decoder on "V4L2 accel", 1 cpu,
@@ -156,6 +145,9 @@ dtoverlay=vc4-kms-v3d,cma-128
 
 ### RPIZERO and even other devices when using v4l2-codec/acceleration 
 ### "Closed Captions/Subtitling" non-functional with v4l2 playback profiles.
+
+
+You will likely want to limit jobs to 1 if using as a backend or even disable comm scanning.
 
 _*For frontend playback on the rpizero.
 While it may make it viewable with some media with proper playback configuration, a downside is that Closed Captions/Subtitling do not appear to work with mythtv in this scenario. If you use those features, a minimum of a rpi2 that can do playback without v4l2 involved will be required. *_
